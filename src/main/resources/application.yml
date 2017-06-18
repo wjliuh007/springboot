@@ -1,0 +1,14 @@
+server:
+    port: 8088
+
+spring:
+    mvc:
+      dispatch-options-request: true
+    thymeleaf:
+        cache: false
+        mode: HTML5
+       # prefix: classpath:/templates # 一定要配置,不然打成jar时无法解析html
+       
+endpoints:
+    shutdown:
+        enabled: true           #此处是支持spring-boot-starter-actuator的reset shutdown命令
